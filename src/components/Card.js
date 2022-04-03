@@ -19,10 +19,7 @@ const Card = ({ card }) => {
             <StyledImage src={imageSource} />
             <StyledStats>
                 <StyledStar src={Star} />
-                <span>
-                    {card.stats.rating}
-                    {card.stats.rating % 1 === 0 && <span>.0</span>}
-                </span>
+                <span>{card.stats.rating}</span>
                 <StyledSpanText>
                     {card.stats.reviewCount} • {card.location}
                 </StyledSpanText>
@@ -66,8 +63,7 @@ const StyledStats = styledComponents.div`
 
 const StyledSpanText = styledComponents.span`
     color: #918E9B;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 4px;
 `;
 
 const StyledSpanBold = styledComponents.span`
